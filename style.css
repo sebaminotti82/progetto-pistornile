@@ -1,0 +1,306 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+/* -------------------------- */
+
+body{
+    background-color: white;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+
+}
+html{
+    scroll-behavior:smooth ;
+}
+
+header{
+    width: 100%;
+    height: 4em;
+    background-color: rgb(78, 7, 7);
+    position: fixed;
+    top: 0;
+}
+.messaggio{
+    width: 100%;
+    height: 100vh;
+
+    position: absolute;
+    display: none;
+}
+header h1{
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 1.5em;
+    margin-left: 20px;
+    color: wheat;
+}
+
+.hamburger{
+    position: absolute;
+    right: 10px;
+    top: 0.7em;
+    font-size: 1.5em;
+    color: wheat;
+    display: none;
+}
+.logo{
+    width: 60px;
+    height: 95%;
+    position: absolute;
+   right: 20px;
+    top: 2.5%;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------------------- */
+/* -------------------------------- */
+/* ------FINE HEADER--------------- */
+/* -------------------------------- */
+
+
+main{
+    width:100% ;
+    height: calc(100vh - 4em);
+    margin-top: 4em;
+    background-color: rgb(250, 218, 196);
+}
+
+.main_left{
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color:rgb(78, 7, 7) ;
+    overflow-y: auto;
+}
+.menu_navigazione{
+    width: 90%;
+    height: 10em;
+    border: 1px solid wheat;
+    margin-left: 5%;
+    background-color: wheat;
+}
+.ButtonMenu{
+    
+    width: 70%;
+    margin-left: 15%;
+    height: 30px;
+    box-shadow:  3px 3px 3px rgb(151, 102, 10);
+    margin-top: 6px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 1em;
+   
+}
+.menu_social{
+    width: 90%;
+    height: 10em;
+    margin-left: 4%;
+    margin-top: 10%;
+}
+.social{
+    width:calc(100% / 2 - 10px);
+    margin-left: 10px;
+    float: left;
+    height: calc(100% / 2 - 10px);
+    margin-top:5px;
+    text-align: center;
+
+}
+.social i{
+    line-height:2.2em;
+    font-size: 30px;
+}
+.foto_menu{
+    width: 90%;
+    height: 400px;
+    margin-left: 5%;
+}
+.foto_menu img{
+    width: 100%;
+    height: 100%;
+}
+
+.main_right{
+    width: 85%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(238, 213, 145);
+}
+.main_box{
+width: 100%;
+height: 100%;
+border: 3px solid white;
+
+}
+.container_slider{
+    position: relative;
+    width: 70%;
+    height: 90%;
+    margin-left: 15%;
+    margin-top: 1%;
+
+   
+}
+.left, .right{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(250, 250, 242);
+    position: absolute;
+    margin-top: 30%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2em;
+    box-shadow: 0px 0px 2px 2px rgb(197, 197, 197);
+    color: rgb(201, 199, 199);
+    z-index: 999;
+    
+    
+}
+.left{
+    left: -35px;
+}
+.right{
+    right: -35px;
+}
+
+.center{
+    width: 100%;
+    position: absolute;
+    height: 70vh;
+    border: 3px solid rgb(240, 231, 214);
+}
+.center img{
+    width: 100%;
+    height: 100%;
+    
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    bottom: - 20px;
+    width: auto;
+    padding: 0 5px;
+    height: 5vh;
+    
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+.nav i{
+    margin-left: 10px;
+    line-height: 5vh;
+}
+
+.active{
+    color: rgb(255, 187, 0);
+}
+.notActive{
+    color:rgb(78, 7, 7)
+}
+
+
+
+
+@media screen and (max-width:600px) {
+    .messaggio{
+      display: block;
+
+    }
+    header h1{
+        font-size: 1.2em;
+        margin-left: 10px;
+        line-height: 3em;
+    }
+    .hamburger{
+        display: block;
+        
+    }
+    .main_left{
+        display: none;
+    }
+    .logo{
+        right: 50px;
+    }
+    .main_right{
+        display: none;
+    }
+    .main_box{
+        display: none;
+    }
+
+}
+
+
+
+
+
+
+@media only screen and ( max-width: 812px) and (orientation: landscape){
+    header h1{
+        font-size: 1.5rem;
+        line-height: 2.2em;
+    }
+    .menu_navigazione{
+        height: 8em;
+    }
+
+    .ButtonMenu{
+        width: 90%;
+        margin-left: 5%;
+        height: 20px;
+        margin-top: 10px;
+        line-height: 20px;
+        font-size: 0.7em;
+        
+    }
+    .menu_social{
+        height: 6em;
+
+    }
+    .social{
+        margin-left: 6.7px;
+    }
+
+    .social i{
+        line-height:2.2em;
+        font-size: 20px;
+        
+    }
+
+    .foto_menu{
+        height: 300px;
+        margin-bottom: 10px;
+    }
+
+    .center{
+        width: 100%;
+        position: absolute;
+        height: 55vh;
+        border: 3px solid rgb(240, 231, 214);
+    }
+
+    .left, .right{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(250, 250, 242);
+        position: absolute;
+        margin-top: 20%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 2em;
+        box-shadow: 0px 0px 2px 2px rgb(197, 197, 197);
+        color: rgb(201, 199, 199);
+        z-index: 999;
+        
+        
+    }
+
+    p{
+        font-size: 0.8vw;
+    }
+
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Il Pistornile Home</title>
+</head>
+<body>
+      <div  class="container">
+
+            <header>
+                <h1>Il Pistornile di Casteggio</h1>
+                  <div class="hamburger"><i class="fas fa-heart"></i></div>
+                    <div class="logo">
+                        <img src="img/stemma.png" alt="">
+                    </div>
+                    <div class="messaggio">
+                         <img style="margin-top: 20px;margin-left: 10px;" src="img/stemma.png" alt="">
+                      <h4 style="text-align: center; color: brown;margin-top: 10px;">RUOTA IL TELEFONO PER VISUALIZZARE IL SITO</h4>
+                    </div>
+            </header>
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------------------------- -->
+<!-- ------------------------------FINE HEADER------------------------------------------ -->
+<!-- ----------------------------------------------------------------------------------- -->
+                 <main>
+                        <div class="main_left">
+                            <div class="menu_navigazione"></div>
+                            <div class="menu_social"></div>
+                               <div class="foto_menu"><img src="img/sfondocell.jpg" alt=""></div>
+                        </div>
+
+                        <!-- ----------------------------------------------------------- -->
+
+                        <div class="main_right">
+                            <div id="mainBox1" class="main_box">
+                                <h1 style="text-align: center;font-size: 3vw;font-weight: bold;color:brown;">LA NOSTRA GALLERY FOTOGRAFICA</h1>
+                                    <div id="root">
+                                        <div class="container_slider">
+                                            <div @click="prev()" class="left"><i class="fas fa-chevron-left"></i></div>
+                                            <div class="center"><img :src="foto[contatore]" alt="">
+                                                <div class="nav">
+                                                    <i @click="clickCircle(index)" v-for="(foto, index) in foto" :class="(contatore == index)?'active':'notActive'"  class="fas fa-circle"></i>
+                                                </div>
+                                            </div>
+                                            <div @click="next()" class="right"><i class="fas fa-chevron-right"></i></div>
+                                              
+                                        </div>
+                                    </div>
+                            </div>
+                            <div id="mainBox2" class="main_box">
+                                <h1 style="text-align: center;margin-top: 50px;color: brown;font-weight: bold;font-size: 3vw;">IL COMITATO DEL PISTORNILE</h1>
+                                <p style="font-size: 1.3vw;padding: 5px;margin-left: 35px;">
+                                    Il comitato per la salvaguardia del pistornile è composto da molteplici persone di ogni fascia d'età !
+                                    Il comitato si occupa del recupero e della valorizzazione di questa parte di Casteggio appunto il pistornile,
+                                    con la sua piazzetta le sue stradine e la tanto amata vittoria alata.Abbiamo risistemato le panchine ,aimè logorate dal tempo
+                                    ma anche dalla mano di qualche giovane un pò troppo vivace!!Vorremo affrontare anche la situazione parcheggi migliorandola,una possibile riapertura del bellissimo parco sottostante purtroppo ora chiuso.
+                                    Cercheremo di coinvolgere più persone per aiutarci in questa nobile causa di riqualificazione .
+                                    
+                                    <h3 style="margin-left: 35px;color: brown;">I PUNTI SALIENTI DEL COMITATO:</h3>
+                                    <ol style="margin-left: 50px;">
+                                        <li>Lotta al vandalismo</li>
+                                        <li>Miglioramento riparazione o sostituzione degli arredi urbani</li>
+                                        <li>Migliorare la situazione dei parcheggi</li>
+                                        <li>Riqualificare l'intera zona, ripulendo ristrutturando abitazioni e creando attività</li>
+                                        <li>Organizzare eventi quali cinema sotto le stelle, degustazioni di birre aetigianali o di vini locali e non</li>
+                                    </ol>
+                                </p>
+                            </div>
+                            <div style="overflow-y: auto;" id="mainBox3" class="main_box">
+                                <h1 style="font-size: 3vw;text-align: center;color: brown;margin-top: 10px;">STORIA DI CASTEGGIO E DEL PISTORNILE</h1>
+                                        <p style="margin-left: 35px;padding: 5px;font-size: 1vw;">
+                                           <h3>Monumenti e luoghi d'interesse</h3> 
+
+                                            Chiesa parrocchiale di San Pietro Martire
+                                            Tra gli edifici storici:
+                                            
+                                            Collegiata di San Pietro Martire, di antichissima origine, ricostruita nel 1814 ma con il campanile trecentesco che domina l'abitato;
+                                            Chiesa di San Sebastiano, già sede dell'omonima confraternita, progettata da Lorenzo Cassani (XVIII secolo), con magnifico stallo corale;
+                                            Palazzo della Certosa (1705), che ospita la biblioteca civica, l'auditorium Cantù e il civico museo archeologico, ricco di reperti in gran parte di provenienza locale (Clastidium);
+                                            Degno di nota anche il Monumento alla Vittoria, situata nel Parco delle Rimembranze, un'imponente scultura bronzea (è alta oltre 18 metri) opera di Enrico Astorri; per la sua fusione furono necessarie oltre 25 tonnellate di bronzo e la costruzione di una speciale fonderia non esistendone al tempo (1926) altre adatte allo scopo;
+                                            Vicino alla Via Emilia, proseguendo verso Fumo, si trova la famosa Fontana d'Annibale, dove secondo una leggenda questi fece abbeverare i suoi elefanti.
+                                            Nella frazione Mairano sorge l'ottocentesca Villa Marina, nella quale dimorò anche Giuseppe Mazzini. Sulla strada per Calvignano, da segnalare Villa Pegazzera, edificata per volere del Collegio Borromeo di Pavia come convitto estivo, risalente nelle sue forme originarie al primo Settecento; sempre nei dintorni di Casteggio c'è la neoclassica Villa Frecciarossa, progettata per i marchesi Botta Adorno alla fine dell'Ottocento.
+                                            <h3>Storia</h3>
+                                            La città di Clastidium ebbe origini liguri, appartenendo a quel popolo che i Greci chiamavano Anamari, e che corrisponde quasi certamente a quelli che i Romani chiamavano Marici, distesi tra l'Appennino e le due sponde del Po attorno a Pavia. I Marici del Po insieme ai Levi del Ticino fondarono presso la confluenza dei due fiumi la città di Pavia, loro comune mercato. Gli Anamari (Marici) e i Levi sono erroneamente detti Celti da Polibio, ma in realtà essi vantano origini anteriori all'invasione celtica e devono essere annoverati tra i popoli liguri. I Marici presero stanza su un modesto rilievo dominante la pianura a sud del Po, nell'attuale Oltrepò Pavese, una collina alquanto scoscesa e impervia nei fianchi, ma dalla sommità pianeggiante; dunque di facile difesa quanto di facile popolamento. Casteggio appare popolata almeno dal VI secolo a.C..
+                                            Divenuto uno dei maggiori villaggi della zona, nella forma del castelliere ("oppidum", città fortificata, lo dice Livio), conobbe i Romani nel 223 a.C. quando i Marici furono dai primi indotti a un'alleanza contro gli Insubri. Poco dopo, nel 222 a.C., gli Insubri, appoggiati da mercenari celti provenienti dalla valle del Rodano, attaccarono la località, ma furono sconfitti dai Romani prontamente giunti in soccorso al comando del console Marco Claudio Marcello. Egli stesso uccise il comandante avversario Virdumaro, e ne consacrò le ricche vesti (spolia opima) a Giove Feretrio. La battaglia di Casteggio aprì ai Romani la via per la sottomissione degli Insubri e la conquista della loro capitale, Milano. Ebbe una vasta eco, e il poeta latino Nevio la celebrò con una tragedia di argomento storico, Clastidium, uno dei più antichi monumenti della letteratura latina.
+                                             
+                                           <br> Fonte wikipedia
+                                        
+                                        </p>
+                            </div>
+                            <div id="mainBox4" class="main_box"></div>
+                        </div>
+                 </main>
+
+      </div>
+        
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
